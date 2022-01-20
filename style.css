@@ -1,0 +1,343 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background: rgb(8, 53, 150);
+}
+label.logo {
+    color: white;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .5px;
+    line-height: 80px;
+    margin: 0 0 0 100px;
+}
+nav ul {
+    float: right;
+    margin: 0 100px 0 0;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+}
+nav ul li a{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-size: 18px;
+}
+nav ul li a.active {
+    background: rgb(0, 17, 255);
+    border-radius: 3px;
+}
+nav ul li a:hover{
+    background: rgb(0, 17, 255);
+    border-radius: 3px;
+}
+/* nav-section End  */
+
+/* section Start  */
+
+section {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url("./background-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 587px;
+    animation: animate 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+}
+@keyframes animate {
+    0%{
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url("./background-1.jpg"); 
+    }
+    50%{
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url("./background-2.jpg");
+    }
+    100%{
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url("./background-3.jpg");
+    }
+}
+.section{
+    text-align: center;
+    padding: 200px 0 0 0;
+}
+.heading-one {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.paragraph-one{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    margin: 10px 0 35px 0;
+}
+.btn {
+    color: white;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+.box{
+    height: 3px;
+    width: 25px;
+    background: white;
+    cursor: pointer;
+    float: right;
+    margin: 20px 50px 0 0;
+    display: none;
+}
+.box::after{
+    content: '';
+    height: 3px;
+    width: 25px;
+    background: white;
+    transform: translateY(10px);
+    position: absolute;
+    cursor: pointer;
+}
+.box::before{
+    content: '';
+    height: 3px;
+    width: 25px;
+    background: white;
+    transform: translateY(-10px);
+    position: absolute;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    display: none;
+}
+@media screen and (max-width: 1024px) and (min-width: 992px) {
+    label.logo {
+        color: white;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .5px;
+        line-height: 80px;
+        margin: 0 0 0 50px;
+    }
+    nav ul li a{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    label.logo {
+        color: white;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .5px;
+        line-height: 80px;
+        margin: 0 0 0 50px;
+    }
+    .box{
+        display: block;
+        margin: 40px 50px 0 0;
+    }
+    nav ul {
+        min-height: 100vh;
+        position: fixed;
+        margin: 0;
+        width: 100%;
+        background: rgb(0, 68, 255);
+        text-align: center;
+        left: -100%;
+        transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    nav ul li {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+    label.logo {
+        color: white;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .5px;
+        line-height: 80px;
+        margin: 0 0 0 50px;
+    }
+    .box{
+        display: block;
+        margin: 40px 50px 0 0;
+    }
+    nav ul {
+        min-height: 100vh;
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        background: rgb(0, 68, 255);
+        text-align: center;
+        left: -100%;
+        transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    nav ul li {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 576px) and (min-width: 360px) {
+    .heading-one {
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+    .paragraph-one{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 35px;
+        letter-spacing: 1.5px;
+        margin: 10px 0 35px 0;
+    }
+    .btn {
+        color: white;
+        text-transform: uppercase;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        border: 2px solid white;
+        padding: 10px 15px;
+        border-radius: 3px;
+    }
+    label.logo {
+        color: white;
+        font-size: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .5px;
+        line-height: 80px;
+        margin: 0 0 0 50px;
+    }
+    .box{
+        display: block;
+        margin: 40px 50px 0 0;
+    }
+    nav ul {
+        min-height: 100vh;
+        position: fixed;
+        width: 100%;
+        background: rgb(0, 68, 255);
+        text-align: center;
+        left: -100%;
+        transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        margin: 0;
+    }
+    nav ul li {
+        display: block;
+    }
+}
+@media screen and (max-width: 360px) and (min-width: 280px){
+    .heading-one {
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .box{
+        display: block;
+        margin: 40px 0 0 50px;
+    }
+    .paragraph-one{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+        margin: 10px 0 35px 0;
+    }
+    .btn {
+        color: white;
+        text-transform: uppercase;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        border: 2px solid white;
+        padding: 10px 15px;
+        border-radius: 3px;
+    }
+    label.logo {
+        color: white;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .5px;
+        line-height: 80px;
+        margin: 0 0 0 25px;
+    }
+    .box{
+        display: block;
+        margin: 40px 50px 0 0;
+    }
+    nav ul {
+        min-height: 100vh;
+        position: fixed;
+        width: 100%;
+        background: rgb(0, 68, 255);
+        text-align: center;
+        left: -100%;
+        transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        margin: 0;
+    }
+    nav ul li {
+        display: block;
+    }
+}
+#check:checked ~ ul {
+    left: 0;
+}
+#check:checked ~ label .box::after {
+    transform: rotate(45deg);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+#check:checked ~ label .box::before {
+    transform: rotate(-45deg);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+#check:checked ~ label .box {
+    background: rgb(0, 57, 180);
+}
+.div{
+    text-align: center;
+}
